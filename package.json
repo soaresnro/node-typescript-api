@@ -9,6 +9,8 @@
   "scripts": {
     "build": "tsc",
     "start": "yarn build && node dist/src/index.js",
+    "lint": "npx eslint ./src/*.ts ./test/*.ts",
+    "lint:fix": "npx eslint ./src/*.ts ./test/*.ts --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -19,9 +21,15 @@
   "author": "Nuno Oliveira",
   "license": "ISC",
   "devDependencies": {
+    "@eslint/js": "^9.4.0",
     "@types/module-alias": "^2.0.4",
     "@types/node": "^20.14.2",
-    "typescript": "^5.4.5"
+    "@typescript-eslint/eslint-plugin": "^7.13.0",
+    "@typescript-eslint/parser": "^7.13.0",
+    "eslint": "9.x",
+    "globals": "^15.4.0",
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.13.0"
   },
   "dependencies": {
     "module-alias": "^2.2.3"
